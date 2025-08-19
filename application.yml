@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sfintegration_db
+    username: batch_user
+    password: batch_pwd
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.format_sql: true
+    open-in-view: false
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: never
+logging:
+  level:
+    root: INFO
+    org.hibernate.SQL: INFO
+    org.springframework.batch: INFO
